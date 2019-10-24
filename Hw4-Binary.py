@@ -34,7 +34,7 @@ class Tree:
 def preorder(r):
     # recursion continues until no more nodes
     if r.val is not None:
-        print(r.val) # prints value at node
+        print(r.val, end=" ") # prints value at node
         if r.left is not None:
             preorder(r.left) # traverses left through tree until no more left nodes
         if r.right is not None:
@@ -46,7 +46,7 @@ def inorder(r):
         inorder(r.left)
     # prints the leftmost value
     if r.val is not None:
-        print(r.val)
+        print(r.val, end=" ")
     # traverses right until it can't anymore
     if r.right is not None:
         inorder(r.right)
@@ -54,18 +54,25 @@ def inorder(r):
 
 def main():
     """tree1 = Tree([1, None, 2, 3])
+    print("Preorder Traversal")
     preorder(tree1._root)
+    print()
     print("********")
+    print("Inorder Traversal")
     inorder(tree1._root)"""
 
     """tree2 = Tree([1, 2, 3, None, 4, None, 5, 6, 7, 8, None, None, None, 9])
+    print("Preorder Traversal")
     preorder(tree2._root)
+    print()
     print("********")
+    print("Inorder Traversal")
     inorder(tree2._root)"""
 
     tree3 = Tree([1, 2, None, 3, 4, None, 5, None, None, 6, 7, None, None, None, 8])
     print("Preorder Traversal")
     preorder(tree3._root)
+    print()
     print("********")
     print("Inorder Traversal")
     inorder(tree3._root)
